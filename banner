@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner TCC - DBQuest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        /* Utilitário para simular gráficos */
+        .bar-container { display: flex; align-items: center; margin-bottom: 4px; }
+        .bar-label { width: 100px; font-size: 10px; color: #4b5563; text-align: right; padding-right: 8px; line-height: 1; }
+        .bar-bg { flex: 1; height: 12px; background-color: #e5e7eb; border-radius: 2px; overflow: hidden; }
+        .bar-fill { height: 100%; background-color: #1e40af; }
+    </style>
+</head>
+<body class="bg-gray-200 p-10">
+
+    <div class="text-center mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Visualização Otimizada do Banner</h1>
+        <p class="text-gray-600">Layout ajustado para evitar vazamento de texto e aumentar o apelo visual.</p>
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-4 mx-auto max-w-2xl text-left text-sm">
+            <p class="font-bold">⚠️ Atenção sobre a Imagem:</p>
+            <p>Para ver a foto do sistema, você deve salvar este arquivo na mesma pasta da sua imagem e <strong>renomear a imagem</strong> para: <code class="bg-yellow-200 px-1 rounded">dbquest.jpg</code></p>
+        </div>
+    </div>
+
+    <!-- Contêiner do Banner -->
+    <div class="w-[900px] h-[1200px] bg-white shadow-2xl mx-auto p-10 border-[1px] border-gray-300 flex flex-col">
+        
+        <!-- 1. CABEÇALHO (Compactado) -->
+        <header class="text-center border-b-4 border-blue-900 pb-4 mb-6 shrink-0">
+            <div class="text-2xl font-bold text-gray-600 mb-2 uppercase tracking-wide">
+                Universidade Cidade de São Paulo
+            </div>
+            <h1 class="text-4xl font-extrabold text-blue-900 mb-3 leading-none uppercase">
+                DBQuest: Gamificação como Estratégia Pedagógica no Ensino de Banco de Dados
+            </h1>
+            <div class="flex justify-center gap-8 text-sm text-gray-800 font-semibold">
+                <span>Brenda C. Guimarães</span>
+                <span>João Vitor Parolini</span>
+                <span>Maria Silveira</span>
+                <span>Rebeca Reis Pereira</span>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">
+                <strong>Orientadores:</strong> Prof.ª Angela Perez Barcellos e Prof. Luiz Fernando Pizzarro Bueno Ramos
+            </p>
+        </header>
+
+        <!-- 2. CONTEÚDO (Grid ajustado) -->
+        <main class="grid grid-cols-3 gap-6 grow overflow-hidden">
+            
+            <!-- COLUNA 1 -->
+            <div class="flex flex-col gap-4">
+                <!-- Introdução -->
+                <section>
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">1. Introdução</h2>
+                    <p class="text-sm text-gray-800 text-justify leading-snug mb-2">
+                        O ensino de Banco de Dados enfrenta desafios de <strong>complexidade</strong> e <strong>baixa motivação</strong>. A literatura aponta que métodos tradicionais falham em engajar alunos na prática de SQL e modelagem.
+                    </p>
+                    
+                    <!-- Gráfico Pizza Simulado (CSS puro) -->
+                    <div class="bg-gray-50 p-3 rounded border border-gray-200 text-center">
+                        <p class="text-xs font-bold text-blue-900 mb-2">Pesquisa com Alunos (N=124):<br>"Qual seu nível de conhecimento?"</p>
+                        <div class="relative w-24 h-24 rounded-full mx-auto" style="background: conic-gradient(#1e40af 0% 53%, #93c5fd 53% 90%, #e5e7eb 90% 100%);"></div>
+                        <div class="flex justify-center gap-2 mt-2 text-[10px]">
+                            <span class="flex items-center"><span class="w-2 h-2 bg-blue-800 mr-1 rounded-full"></span>53% Básico</span>
+                            <span class="flex items-center"><span class="w-2 h-2 bg-blue-300 mr-1 rounded-full"></span>37% Médio</span>
+                        </div>
+                        <p class="text-[10px] text-gray-500 mt-1 italic">Mesmo após cursar a disciplina.</p>
+                    </div>
+                </section>
+                
+                <!-- Objetivos -->
+                <section>
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">2. Objetivos</h2>
+                    <ul class="list-disc list-inside text-sm text-gray-800 space-y-1">
+                        <li><strong>Geral:</strong> Desenvolver o <em>DBQuest</em>, plataforma gamificada para ensino de SQL.</li>
+                        <li><strong>Específicos:</strong>
+                            <ul class="pl-4 list-[square] text-gray-700 text-xs mt-1">
+                                <li>Diagnosticar barreiras de aprendizado.</li>
+                                <li>Implementar feedback em tempo real.</li>
+                                <li>Validar arquitetura React + Firebase.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Metodologia -->
+                <section>
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">3. Metodologia</h2>
+                    <div class="text-sm text-gray-800 space-y-2">
+                        <div class="flex items-start">
+                            <span class="font-bold text-blue-800 mr-2">Fase 1:</span>
+                            <span>Pesquisa Quantitativa (Survey) com 124 estudantes de TI.</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="font-bold text-blue-800 mr-2">Fase 2:</span>
+                            <span>Desenvolvimento (P&D) incremental da ferramenta.</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUNA 2 (Central - Mais Visual) -->
+            <div class="flex flex-col gap-4">
+                
+                <!-- Resultados da Pesquisa -->
+                <section>
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">4. Diagnóstico</h2>
+                    <p class="text-sm text-gray-800 mb-2">Principais causas de desmotivação identificadas:</p>
+                    
+                    <!-- Gráfico de Barras Simulado -->
+                    <div class="bg-white p-2 border border-gray-200 rounded mb-2">
+                        <div class="bar-container">
+                            <div class="bar-label">Pouco tempo p/ praticar</div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 42.5%"></div></div>
+                            <div class="text-[10px] ml-1 font-bold">42.5%</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-label">Dificuldade Conceitual</div>
+                            <div class="bar-bg"><div class="bar-fill bg-blue-400" style="width: 30.8%"></div></div>
+                            <div class="text-[10px] ml-1 font-bold">30.8%</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-label">Falta de ex. práticos</div>
+                            <div class="bar-bg"><div class="bar-fill bg-blue-300" style="width: 26.7%"></div></div>
+                            <div class="text-[10px] ml-1 font-bold">26.7%</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-blue-900 font-bold text-center border-t border-blue-100 pt-1">
+                        "70.8% pediram mais atividades práticas"
+                    </p>
+                </section>
+
+                <!-- Solução (O Sistema) -->
+                <section class="grow flex flex-col">
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">5. A Plataforma DBQuest</h2>
+                    
+                    <!-- Cards de Features -->
+                    <div class="grid grid-cols-2 gap-2 mb-2">
+                        <div class="bg-blue-50 p-2 rounded text-center border border-blue-100">
+                            <p class="text-xs font-bold text-blue-800">Frontend Reativo</p>
+                            <p class="text-[10px] text-gray-600">React 18 SPA</p>
+                        </div>
+                        <div class="bg-blue-50 p-2 rounded text-center border border-blue-100">
+                            <p class="text-xs font-bold text-blue-800">Backend Realtime</p>
+                            <p class="text-[10px] text-gray-600">Google Firebase</p>
+                        </div>
+                    </div>
+
+                    <!-- Imagem da Tela (Visual Principal) -->
+                    <div class="bg-gray-800 rounded-lg p-1 border-2 border-gray-400 shadow-md grow flex flex-col relative overflow-hidden">
+                        <!-- Barra de Título Decorativa -->
+                        <div class="bg-gray-900 h-4 w-full flex items-center space-x-1 px-2 mb-1 shrink-0">
+                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                        </div>
+                        <!-- Conteúdo: Imagem Real -->
+                        <div class="bg-white flex-1 relative overflow-hidden bg-gray-100 flex items-center justify-center group">
+                             <!-- A imagem principal -->
+                             <img 
+                                src="dbquest.jpg" 
+                                alt="Interface do DBQuest - Dashboard do Aluno" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; document.getElementById('error-msg').style.display='flex';"
+                            >
+                            
+                            <!-- Mensagem de Erro (Só aparece se a imagem falhar) -->
+                            <div id="error-msg" class="hidden absolute inset-0 flex-col items-center justify-center bg-gray-100 text-gray-500 p-4 text-center">
+                                <svg class="w-12 h-12 mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <p class="text-xs font-bold text-gray-700">Imagem não encontrada</p>
+                                <p class="text-[10px] mt-1">Renomeie seu arquivo para <strong>dbquest.jpg</strong><br>e coloque na mesma pasta deste HTML.</p>
+                            </div>
+                        </div>
+                        <!-- Label -->
+                        <div class="absolute bottom-2 right-2 bg-yellow-300 text-black text-[9px] font-bold px-2 py-0.5 rounded shadow opacity-90">Interface do Aluno</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLUNA 3 -->
+            <div class="flex flex-col gap-4">
+                <!-- Discussão -->
+                <section>
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">6. Resultados & Discussão</h2>
+                    <p class="text-sm text-gray-800 text-justify leading-snug mb-2">
+                        A plataforma cria um <strong>"ginásio virtual"</strong>. A arquitetura reativa permite que o feedback (XP, Ranking) seja instantâneo, essencial para manter o <em>loop</em> de gamificação.
+                    </p>
+                    <ul class="list-disc list-inside text-sm text-gray-800 leading-snug">
+                        <li>Autonomia para praticar fora da sala.</li>
+                        <li>Competitividade saudável via Ranking Global.</li>
+                        <li>Redução do medo de errar (Sistema de Vidas).</li>
+                    </ul>
+                </section>
+
+                <!-- Conclusão -->
+                <section>
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">7. Conclusão</h2>
+                    <div class="bg-green-50 border-l-4 border-green-600 p-2 mb-2">
+                        <p class="text-xs text-gray-800 italic">
+                            "O problema não é a dificuldade do SQL, mas a falta de metodologia ativa."
+                        </p>
+                    </div>
+                    <p class="text-sm text-gray-800 text-justify">
+                        O DBQuest viabiliza a prática constante exigida pelos alunos. Trabalhos futuros incluem um <strong>estudo de caso controlado</strong> para medir o ganho acadêmico.
+                    </p>
+                </section>
+
+                <!-- Referências -->
+                <section class="grow">
+                    <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">Referências</h2>
+                    <ul class="text-[10px] text-gray-600 space-y-1 text-justify font-medium">
+                        <li>[1] CASTRO, J.; SIQUEIRA, H. Dificuldades no aprendizado de Banco de Dados. <em>RBIE</em>, 2018.</li>
+                        <li>[2] MORALES-TRUJILLO, M. E. Gamification and SQL: An Empirical Study. <em>ACM</em>, 2020.</li>
+                        <li>[3] DETERDING, S. et al. From Game Design Elements to Gamefulness. <em>MindTrek</em>, 2011.</li>
+                        <li>[4] DICHEVA, D. et al. Gamification in Education. <em>ETS</em>, 2015.</li>
+                    </ul>
+                </section>
+
+                <!-- Footer / QR Code -->
+                <div class="mt-auto bg-gray-100 border-t-4 border-blue-900 p-3 flex items-center justify-between">
+                    <div class="text-left">
+                        <p class="text-xs font-bold text-blue-900">Ciência da Computação - 2025</p>
+                        <p class="text-[10px] text-gray-500">Universidade Cidade de São Paulo</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <!-- QR Code Projeto -->
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-white border border-gray-300 mx-auto flex items-center justify-center mb-1">
+                                <svg class="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h6v6H3V3zm12 0h6v6h-6V3zM3 15h6v6H3v-6zm12 0h6v6h-6v-6zM5 5v2h2V5H5zm12 0v2h2V5h-2zM5 17v2h2v-2H5zm12 0v2h2v-2h-2z"/></svg>
+                            </div>
+                            <p class="text-[8px] font-bold">Acesse o Projeto</p>
+                        </div>
+                        
+                        <!-- QR Code GitHub -->
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-white border border-gray-300 mx-auto flex items-center justify-center mb-1">
+                                <!-- Ícone de Código/Git para diferenciar -->
+                                <svg class="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <p class="text-[8px] font-bold">GitHub / Código</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

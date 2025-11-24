@@ -21,15 +21,6 @@
     <div class="text-center mb-6">
         <h1 class="text-2xl font-bold text-gray-800">Visualização Otimizada do Banner</h1>
         <p class="text-gray-600">Layout ajustado para evitar vazamento de texto e aumentar o apelo visual.</p>
-        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-4 mx-auto max-w-2xl text-left text-sm">
-            <p class="font-bold">⚠️ Instruções para Imagens:</p>
-            <ul class="list-disc list-inside mt-1 space-y-1">
-                <li>Imagem do Sistema: Salve como <code class="bg-yellow-200 px-1 rounded">dbquest.png</code></li>
-                <li>QR Code do Projeto: Salve como <code class="bg-yellow-200 px-1 rounded">qrcode_projeto.png</code></li>
-                <li>QR Code do GitHub: Salve como <code class="bg-yellow-200 px-1 rounded">qrcode_github.png</code></li>
-            </ul>
-            <p class="mt-2 text-xs">Todas as imagens devem estar na mesma pasta deste arquivo HTML.</p>
-        </div>
     </div>
 
     <!-- Contêiner do Banner -->
@@ -44,13 +35,10 @@
                 DBQuest: Gamificação como Estratégia Pedagógica no Ensino de Banco de Dados
             </h1>
             <div class="flex justify-center gap-8 text-sm text-gray-800 font-semibold">
-                <span>Brenda C. Guimarães</span>
-                <span>João Vitor Parolini</span>
-                <span>Maria Silveira</span>
-                <span>Rebeca Reis Pereira</span>
+                <span>Brenda C. Guimarães, João Vitor Parolini, Maria Silveira e Rebeca Reis Pereira</span>
             </div>
             <p class="text-sm text-gray-600 mt-2">
-                <strong>Orientadores:</strong> Prof.ª Angela Perez Barcellos e Prof. Luiz Fernando Pizzarro Bueno Ramos
+                <strong>Orientadores:</strong> Prof. Angela Perez Barcellos e Prof. Luiz Fernando Pizzarro Bueno Ramos
             </p>
         </header>
 
@@ -120,7 +108,7 @@
                     <!-- Gráfico de Barras Simulado -->
                     <div class="bg-white p-2 border border-gray-200 rounded mb-2">
                         <div class="bar-container">
-                            <div class="bar-label">Pouco tempo p/ praticar</div>
+                            <div class="bar-label">Pouco tempo para praticar</div>
                             <div class="bar-bg"><div class="bar-fill" style="width: 42.5%"></div></div>
                             <div class="text-[10px] ml-1 font-bold">42.5%</div>
                         </div>
@@ -130,7 +118,7 @@
                             <div class="text-[10px] ml-1 font-bold">30.8%</div>
                         </div>
                         <div class="bar-container">
-                            <div class="bar-label">Falta de ex. práticos</div>
+                            <div class="bar-label">Falta de exercícios práticos</div>
                             <div class="bar-bg"><div class="bar-fill bg-blue-300" style="width: 26.7%"></div></div>
                             <div class="text-[10px] ml-1 font-bold">26.7%</div>
                         </div>
@@ -141,7 +129,7 @@
                 </section>
 
                 <!-- Solução (O Sistema) -->
-                <section class="grow flex flex-col">
+                <section class="flex flex-col">
                     <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">5. A Plataforma DBQuest</h2>
                     
                     <!-- Cards de Features -->
@@ -156,21 +144,16 @@
                         </div>
                     </div>
 
-                    <!-- Imagem da Tela (Visual Principal) -->
-                    <div class="bg-gray-800 rounded-lg p-1 border-2 border-gray-400 shadow-md grow flex flex-col relative overflow-hidden">
-                        <!-- Barra de Título Decorativa -->
-                        <div class="bg-gray-900 h-4 w-full flex items-center space-x-1 px-2 mb-1 shrink-0">
-                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
-                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                        </div>
+                    <!-- Imagem da Tela (Visual Principal) - MOLDURA AJUSTADA AO CONTEÚDO -->
+                    <div class="flex flex-col relative overflow-hidden border-2 border-gray-300 rounded-lg shadow-sm">
+                        
                         <!-- Conteúdo: Imagem Real -->
                         <div class="bg-white flex-1 relative overflow-hidden bg-gray-100 flex items-center justify-center group">
                              <!-- A imagem principal -->
                              <img 
                                 src="dbquest.png" 
                                 alt="Interface do DBQuest - Dashboard do Aluno" 
-                                class="w-full h-full object-cover"
+                                class="w-full object-contain bg-gray-50"
                                 onerror="this.style.display='none'; document.getElementById('error-msg').style.display='flex';"
                             >
                             
@@ -181,8 +164,6 @@
                                 <p class="text-[10px] mt-1">Renomeie seu arquivo para <strong>dbquest.png</strong><br>e coloque na mesma pasta deste HTML.</p>
                             </div>
                         </div>
-                        <!-- Label -->
-                        <div class="absolute bottom-2 right-2 bg-yellow-300 text-black text-[9px] font-bold px-2 py-0.5 rounded shadow opacity-90">Interface do Aluno</div>
                     </div>
                 </section>
             </div>
@@ -219,15 +200,15 @@
                 <section class="grow">
                     <h2 class="text-xl font-bold text-white bg-blue-900 px-2 py-1 mb-2 uppercase">Referências</h2>
                     <ul class="text-[10px] text-gray-600 space-y-1 text-justify font-medium">
-                        <li>[1] CASTRO, J.; SIQUEIRA, H. Dificuldades no aprendizado de Banco de Dados. <em>RBIE</em>, 2018.</li>
-                        <li>[2] MORALES-TRUJILLO, M. E. Gamification and SQL: An Empirical Study. <em>ACM</em>, 2020.</li>
-                        <li>[3] DETERDING, S. et al. From Game Design Elements to Gamefulness. <em>MindTrek</em>, 2011.</li>
-                        <li>[4] DICHEVA, D. et al. Gamification in Education. <em>ETS</em>, 2015.</li>
+                        <li>[1] CASTRO, Ronney Moreira de; SIQUEIRA, Sean Wolfgand Matsui. <b>Desenvolvimento e Avaliação de uma Metodologia de Aprendizagem Ativa Apoiada pelo uso de QR Code para Ensino de Banco de Dados.</b>Sociedade Brasileira de Computação, 2018.</li>
+                        <li>[2] TRUJILLO, Miguel Ehecatl; GARCÍA-MIRELES, Gabriel. <b>Gamification and SQL: an empirical study on student performance in a database course.</b> ACM Transactions on Computing Education, New York, v. 21, p. 1–29, 2020.</li>
+                        <li>[3] DETERDING, S. et al. <b>From Game Design Elements to Gamefulness.</b> In: MindTrek '11, 2011.</li>
+                        <li>[4] DICHEVA, D. et al. <b>Gamification in Education: A Systematic Mapping Study.</b> Educational Technology & Society, 2015.</li>
                     </ul>
                 </section>
 
                 <!-- Footer / QR Code -->
-                <div class="mt-auto bg-gray-100 border-t-4 border-blue-900 p-3 flex items-center justify-between">
+                <div class="mt-auto bg-gray-100 border-t-4 border-blue-900 p-1 flex items-center justify-between">
                     <div class="text-left">
                         <p class="text-xs font-bold text-blue-900">Ciência da Computação - 2025</p>
                         <p class="text-[10px] text-gray-500">Universidade Cidade de São Paulo</p>
